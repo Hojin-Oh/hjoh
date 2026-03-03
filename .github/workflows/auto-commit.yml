@@ -1,0 +1,29 @@
+name: Vault 자동 커밋
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  auto-commit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: 체크아웃
+        uses: actions/checkout@v4
+
+      - name: 변경 사항 커밋 (서버 측 파일 존재 시)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "커밋할 변경 사항 없음"
+          else
+            TIMESTAMP=$(TZ='Asia/Seoul' date +'%Y-%m-%d %H:%M')
+            git commit -m "자동 커밋 (Actions): $TIMESTAMP"
+            git push
+          fi

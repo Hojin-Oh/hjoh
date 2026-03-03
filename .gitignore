@@ -9,6 +9,9 @@
 # 로컬 휴지통
 .trash/
 
+# 자동 커밋 로그
+auto-commit.log
+
 # OS 생성 파일
 .DS_Store
 Thumbs.db
