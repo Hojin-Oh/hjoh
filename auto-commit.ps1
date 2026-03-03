@@ -1,7 +1,7 @@
 # Obsidian Vault 자동 커밋 & 푸시 스크립트
 # Windows 작업 스케줄러에 등록하여 주기적으로 실행
 
-$vaultPath = "C:\Users\hjoh\OneDrive\문서\Obsidian Vault"
+$vaultPath = Split-Path -Parent $MyInvocation.MyCommand.Path
 $logFile   = "$vaultPath\auto-commit.log"
 
 Set-Location $vaultPath
