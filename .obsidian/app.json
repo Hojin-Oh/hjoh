@@ -1,0 +1,17 @@
+{
+  "alwaysUpdateLinks": true,
+  "promptDelete": false,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "00 Inbox",
+  "pdfExportSettings": {
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "trashOption": "local",
+  "attachmentFolderPath": "99 files",
+  "showLineNumber": true,
+  "livePreview": true,
+  "defaultViewMode": "preview"
+}

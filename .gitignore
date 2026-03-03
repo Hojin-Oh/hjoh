@@ -1,0 +1,15 @@
+# Obsidian 작업 상태 (기기마다 달라지는 파일)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+
+# 플러그인 캐시 및 임시 데이터
+.obsidian/plugins/*/data.json
+
+# 로컬 휴지통
+.trash/
+
+# OS 생성 파일
+.DS_Store
+Thumbs.db
+desktop.ini
